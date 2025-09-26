@@ -7,7 +7,7 @@ metadata:
   tags:
     - java
     - C#
-    -TypeScript
+    - TypeScript
   links:
     - title: Website
       url: http://backstage.io
@@ -24,3 +24,13 @@ spec:
   system: artist-engagement-portal
   dependsOn: ['resource:artists-db']
   apiConsumedBy: ['component:www-artist']
+  targets:
+    - ./apis/hello-world-api.yaml
+    - ./apis/hello-world-trpc-api.yaml
+    - ./apis/petstore-api.yaml
+    - ./apis/petstore-webhook-api.yaml
+    - ./apis/spotify-api.yaml
+    - ./apis/streetlights-api.yaml
+    - ./apis/swapi-graphql.yaml
+    - ./apis/wayback-archive-api.yaml
+    - ./apis/wayback-search-api.yaml
