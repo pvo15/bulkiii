@@ -1,21 +1,22 @@
-# app-config.yaml (Backstage Backend Configuration)
-apiVersion: backstage.io/v1alpha1
 catalog:
+  # Base URL for the Catalog backend
+  baseUrl: http://localhost:7007/catalog
+  
+  # 🎯 The Locations section tells Backstage where to find your YAML files
   locations:
-    # Remote catalog (GitHub raw URL)
+    # 💡 Solution for Ingesting Multiple Split Files (Groups, Users, Systems, APIs, Components)
     - type: url
-      target: https://raw.githubusercontent.com/pvo15/bulkiii/main/catalog-info.yaml
+      # ⚠️ IMPORTANT: Set the 'target' to the base directory containing all your split folders.
+      # This example assumes all your entity files are within a 'catalog/' folder
+      # in the 'main' branch of the 'pvo15/bulkiii' repository.
+      target: https://github.com/pvo15/bulkiii/blob/main/catalog/
+      
+      # ➡️ The 'rules' section uses a GLOB pattern (**) to find any .yaml or .yml file
+      # inside any subdirectory of the 'catalog/' folder.
       rules:
-        - allow: [ Group, User, Component, API, System ]
-
-    # Or, if you keep it local to the repo:
-    # - type: file
-    #   target: ./catalog-info.yaml
-    #   rules:
-    #     - allow: [ Group, User, Component, API, System ]
-
-  processors:
-    github:
-      providerId: 'github-production'
-      catalog:
-        allow: [ Group, User, Component, API, System ]
+        # This single rule discovers files like:
+        # - catalog/groups/group-splitz-team.yaml
+        # - catalog/users/user-gago.yaml
+        # - catalog/components/component-bulk-worker-service.yaml
+        - allow: [ Group, User, Component, System, API ] # Must allow all entity kinds
+          pattern: '**/(*.yaml|*.yml)'
