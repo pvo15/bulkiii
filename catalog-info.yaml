@@ -4,7 +4,23 @@ metadata:
   name: bulkiii
   annotations:
     github.com/project-slug: pvo15/bulkiii
+  tags:
+    - java
+    - C#
+    -TypeScript
+  links:
+    - title: Website
+      url: http://backstage.io
+    - title: Documentation
+      url: https://backstage.io/docs
+    - title: Storybook
+      url: https://backstage.io/storybook
+    - title: Discord Chat
+      url: https://discord.com/invite/EBHEGzX
 spec:
-  type: library
-  owner: CNCF
-  lifecycle: production
+  type: service
+  lifecycle: experimental
+  owner: team-a
+  system: artist-engagement-portal
+  dependsOn: ['resource:artists-db']
+  apiConsumedBy: ['component:www-artist']
