@@ -74,7 +74,7 @@ spec:
   type: openapi
   lifecycle: production
   # 🔗 TEAM: The API is owned by the Bulk Core Team.
-  owner: group:bulk-core-team
+  owner: group:splitz-team
   system: bulk-processing-system
   definition:
     $text: https://github.com/example-org/bulk-ingestion-api/blob/main/openapi.yaml
@@ -99,7 +99,7 @@ spec:
   type: service
   lifecycle: production
   # 🔗 TEAM: Owned by the Bulk Core Team.
-  owner: group:bulk-core-team
+  owner: group:splitz-team
   system: bulk-processing-system
   # 🔗 API: Consumes its own defined API (or provides a messaging API).
   consumesApis:
@@ -125,7 +125,7 @@ spec:
   type: library
   lifecycle: production
   # 🔗 TEAM: Owned by the Bulk Core Team.
-  owner: group:bulk-core-team
+  owner: group:splitz-team
   system: bulk-processing-system
 
 ---
@@ -150,7 +150,7 @@ spec:
   type: website
   lifecycle: production
   # 🔗 TEAM: Owned by the Bulk Core Team.
-  owner: group:bulk-core-team
+  owner: group:splitz-team
   system: bulk-processing-system
   # 🔗 API: Consumes the Bulk Ingestion API to display job status.
   consumesApis:
