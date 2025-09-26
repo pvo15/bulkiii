@@ -7,20 +7,20 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: bulk-core-team
-  title: Bulk Core Processing Team
-  description: Manages all services related to high-volume data ingestion and processing.
+  name: splitz-team
+  title: Sprint online Team
+  description: Get a loan with us.
 spec:
   type: team
   profile:
-    displayName: Bulk Core Team
-    email: bulk-team@example.com
+    displayName: Splitz Team
+    email: splitz-team@example.com
   parent: engineering-department 
   children: []
   # 🔗 MEMBERS: Lists the User entities belonging to this team.
   members:
-    - user:john-doe
-    - user:jane-smith
+    - user:gago
+    - user:edward
 
 ---
 # ----------------------------------------------------------------------
@@ -30,31 +30,31 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: john-doe
-  title: John Doe
-  description: Backend Lead for the Bulk Core Team.
+  name: gago
+  title: Gagoo
+  description: Product Owner of Splitz.
 spec:
   profile:
-    displayName: John Doe
-    email: john.doe@example.com
+    displayName: Gagoooo
+    email: gagog.doe@example.com
   # 🔗 TEAM: Links the user back to their group.
   memberOf:
-    - bulk-core-team
+    - splitz-team
 
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: jane-smith
-  title: Jane Smith
-  description: UI/Frontend Developer for the Bulk Core Team.
+  name: edward
+  title: Edward
+  description: UI Lead for the Splitz  Team.
 spec:
   profile:
-    displayName: Jane Smith
-    email: jane.smith@example.com
+    displayName: Edward
+    email: Edward.smith@example.com
   # 🔗 TEAM: Links the user back to their group.
   memberOf:
-    - bulk-core-team
+    - splitz-team
 
 ---
 # ----------------------------------------------------------------------
