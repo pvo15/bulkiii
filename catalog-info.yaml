@@ -7,10 +7,3 @@ spec:
   type: file
   targets:
     - ./catalog/groups/group-splitz-team.yaml
-    - ./catalog/users/user-gago.yaml
-    - ./catalog/users/user-edward.yaml
-    - ./catalog/systems/system-splitz.yaml
-    - ./catalog/apis/api-bulk-ingestion.yaml
-    - ./catalog/components/component-bulk-status-dashboard.yaml
-    - ./catalog/components/component-bulk-validator-lib.yaml
-    - ./catalog/components/component-bulk-worker-service.yaml
