@@ -1,5 +1,5 @@
 # app-config.yaml (Backstage Backend Configuration)
-
+apiVersion: backstage.io/v1alpha1
 catalog:
   locations:
     # Assuming this is the location you registered for the consolidated file
