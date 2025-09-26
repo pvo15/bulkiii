@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: Location
+kind: Catalog
 metadata:
   name: splitz-catalog
   description: Central hub for managing Splitz project entities in the Backstage Catalog.
