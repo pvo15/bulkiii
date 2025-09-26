@@ -1,12 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: bulk-status-dashboard
-  title: Bulk Status Dashboard
-  description: User interface for tracking and managing bulk processing jobs.
+  name: Splitz-dashboard
+  title: Splitz Dashboard
+  description: User interface for tracking and managing Splitz processing jobs.
   tags:
     - react
     - ui
+    - core
   annotations:
     github.com/project-slug: pvo15/bulkiii
 spec:
