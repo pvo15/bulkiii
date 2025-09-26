@@ -1,18 +1,4 @@
 apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: engineering-department
-  title: Engineering Department
-  description: Parent group for engineering teams.
-spec:
-  type: department
-  profile:
-    displayName: Engineering Department
-    email: engineering@example.com
-  children:
-    - splitz-team
----
-apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: bulk-status-dashboard
