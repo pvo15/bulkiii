@@ -4,7 +4,7 @@ catalog:
   locations:
     # Assuming this is the location you registered for the consolidated file
     - type: url
-      target: https://github.com/pvo15/bulkiii/blob/main/catalog-info.yaml
+      target: ./catalog-info.yaml
       # 🚨 THE FIX: Add explicit rules to allow ALL entity kinds present in the file
       rules:
         - allow: [ Group, User, Component, API ] # <--- Ensure all Kinds are listed here
