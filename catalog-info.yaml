@@ -1,13 +1,31 @@
 # catalog-info.yaml - Consolidated Entity Definitions
 
 # ----------------------------------------------------------------------
+# 0. PARENT GROUP (Kind: Group)
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: engineering-department
+  title: Engineering Department
+  description: Parent group for engineering teams.
+spec:
+  type: department
+  profile:
+    displayName: Engineering Department
+    email: engineering@example.com
+  children:
+    - splitz-team
+
+---
+# ----------------------------------------------------------------------
 # 1. TEAM (Kind: Group)
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: splitz-team
-  title: Sprint online Team
+  title: Sprint Online Team
   description: Get a loan with us.
 spec:
   type: team
@@ -28,7 +46,7 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: gago
-  title: Gagoo
+  title: Product Owner
   description: Product Owner of Splitz.
 spec:
   profile:
@@ -42,12 +60,12 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: edward
-  title: Edward
+  title: UI Lead
   description: UI Lead for the Splitz Team.
 spec:
   profile:
     displayName: Edward
-    email: Edward.smith@example.com
+    email: edward.smith@example.com
   memberOf:
     - splitz-team
 
@@ -138,3 +156,16 @@ spec:
   system: bulk-processing-system
   consumesApis:
     - bulk-ingestion-api
+
+---
+# ----------------------------------------------------------------------
+# 7. SYSTEM (Kind: System)
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: bulk-processing-system
+  title: Bulk Processing System
+  description: System responsible for ingestion, validation, and processing of bulk jobs.
+spec:
+  owner: group:splitz-team
