@@ -1,13 +1,36 @@
 apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-splitz
+  description: Splitz
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: splitz.com
+    picture: https://sprintonline.am/squidex-client/api/assets/client/59521d2a-0239-4ef9-ba94-1a5d4c319513
+  parent: backstage
+  children: []
+  
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Gago.davison
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: gago-davison@example.com
+    picture: https://sprintonline.am/squidex-client/api/assets/client/59521d2a-0239-4ef9-ba94-1a5d4c319513
+  memberOf: [team-Splitz]
+
+
+
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: bulkiii
   annotations:
     github.com/project-slug: pvo15/bulkiii
-  tags:
-    - java
-    - C#
-    - TypeScript
   links:
     - title: Website
       url: http://backstage.io
@@ -20,7 +43,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: team-a
+  owner: team-splitz
   system: artist-engagement-portal
   dependsOn: ['resource:artists-db']
   apiConsumedBy: ['component:www-artist']
