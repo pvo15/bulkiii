@@ -1,57 +1,157 @@
+# catalog-info.yaml - Consolidated Entity Definitions
+
+# ----------------------------------------------------------------------
+# 1. TEAM (Kind: Group)
+# Defines the team that owns all related entities.
+# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: team-splitz
-  description: Splitz
+  name: bulk-core-team
+  title: Bulk Core Processing Team
+  description: Manages all services related to high-volume data ingestion and processing.
 spec:
   type: team
   profile:
-    # Intentional no displayName for testing
-    email: tests@splitz.com
-    picture: https://sprintonline.am/squidex-client/api/assets/client/59521d2a-0239-4ef9-ba94-1a5d4c319513
-  parent: backstage
+    displayName: Bulk Core Team
+    email: bulk-team@example.com
+  parent: engineering-department 
   children: []
-  
+  # 🔗 MEMBERS: Lists the User entities belonging to this team.
+  members:
+    - user:john-doe
+    - user:jane-smith
+
+---
+# ----------------------------------------------------------------------
+# 2. MEMBERS (Kind: User)
+# Defines two user entities that are members of the team.
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: Gagooooo.davison
+  name: john-doe
+  title: John Doe
+  description: Backend Lead for the Bulk Core Team.
 spec:
   profile:
-    # Intentional no displayName for testing
-    email: gago-davison@example.com
-    picture: https://sprintonline.am/squidex-client/api/assets/client/59521d2a-0239-4ef9-ba94-1a5d4c319513
-  memberOf: [team-Splitz]
+    displayName: John Doe
+    email: john.doe@example.com
+  # 🔗 TEAM: Links the user back to their group.
+  memberOf:
+    - bulk-core-team
 
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jane-smith
+  title: Jane Smith
+  description: UI/Frontend Developer for the Bulk Core Team.
+spec:
+  profile:
+    displayName: Jane Smith
+    email: jane.smith@example.com
+  # 🔗 TEAM: Links the user back to their group.
+  memberOf:
+    - bulk-core-team
 
+---
+# ----------------------------------------------------------------------
+# 3. API (Kind: API)
+# Defines the API used by the service and the UI component.
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bulk-ingestion-api
+  title: Bulk Ingestion REST API
+  description: Handles initial data submission and status checks for bulk jobs.
+  tags:
+    - rest
+    - production
+spec:
+  type: openapi
+  lifecycle: production
+  # 🔗 TEAM: The API is owned by the Bulk Core Team.
+  owner: group:bulk-core-team
+  system: bulk-processing-system
+  definition:
+    $text: https://github.com/example-org/bulk-ingestion-api/blob/main/openapi.yaml
 
+---
+# ----------------------------------------------------------------------
+# 4. SERVICES (Kind: Component, Type: service)
+# Defines the backend worker service.
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: bulkiii
+  name: bulk-worker-service
+  title: Bulk Worker Service
+  description: Asynchronous service to process bulk jobs.
+  tags:
+    - java
+    - queue
   annotations:
-    github.com/project-slug: pvo15/bulkiii
-  links:
-    - title: Website
-      url: http://backstage.io
-    - title: Documentation
-      url: https://backstage.io/docs
-    - title: Storybook
-      url: https://backstage.io/storybook
-    - title: Discord Chat
-      url: https://discord.com/invite/EBHEGzX
+    backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-worker-service/blob/main/docs
 spec:
   type: service
-  lifecycle: experimental
-  owner: team-splitz
-  system: artist-engagement-portal
-  dependsOn: ['resource:artists-db']
-  apiConsumedBy: ['component:www-artist']
-  targets:
-    - ./apis/hello-world-api.yaml
-    - ./apis/hello-world-trpc-api.yaml
-    - ./apis/petstore-api.yaml
-    - ./apis/petstore-webhook-api.yaml
-    - ./apis/spotify-api.yaml
-    - ./apis/streetlights-api.yaml
-    - ./apis/swapi-graphql.yaml
-    - ./apis/wayback-archive-api.yaml
-    - ./apis/wayback-search-api.yaml
+  lifecycle: production
+  # 🔗 TEAM: Owned by the Bulk Core Team.
+  owner: group:bulk-core-team
+  system: bulk-processing-system
+  # 🔗 API: Consumes its own defined API (or provides a messaging API).
+  consumesApis:
+    - bulk-ingestion-api
+
+---
+# ----------------------------------------------------------------------
+# 5. LIBS (Kind: Component, Type: library)
+# Defines a reusable library used by the service and UI.
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bulk-validator-lib
+  title: Bulk Data Validator Library
+  description: Common logic for validating incoming data formats.
+  tags:
+    - shared
+    - python
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-validator-lib/blob/main/docs
+spec:
+  type: library
+  lifecycle: production
+  # 🔗 TEAM: Owned by the Bulk Core Team.
+  owner: group:bulk-core-team
+  system: bulk-processing-system
+
+---
+# ----------------------------------------------------------------------
+# 6. UI COMPONENTS (Kind: Component, Type: website)
+# Defines the frontend UI component, linked to the user's provided repository.
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bulk-status-dashboard
+  title: Bulk Status Dashboard
+  description: User interface for tracking and managing bulk processing jobs.
+  tags:
+    - react
+    - ui
+  annotations:
+    # 🔗 CODE: Links to the GitHub repository provided by the user.
+    github.com/project-slug: pvo15/bulkiii
+    backstage.io/techdocs-ref: url:https://github.com/pvo15/bulkiii/blob/main/docs
+spec:
+  type: website
+  lifecycle: production
+  # 🔗 TEAM: Owned by the Bulk Core Team.
+  owner: group:bulk-core-team
+  system: bulk-processing-system
+  # 🔗 API: Consumes the Bulk Ingestion API to display job status.
+  consumesApis:
+    - bulk-ingestion-api
