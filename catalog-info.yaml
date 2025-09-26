@@ -1,7 +1,7 @@
 # catalog-info.yaml - Consolidated Entity Definitions
 
 # ----------------------------------------------------------------------
-# 1. TEAM (Kind: Group) - CORRECT START
+# 1. TEAM (Kind: Group)
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -22,7 +22,7 @@ spec:
 
 ---
 # ----------------------------------------------------------------------
-# 2. MEMBERS (Kind: User) - FIXED! 🛠️
+# 2. MEMBERS (Kind: User)
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -38,7 +38,6 @@ spec:
     - splitz-team
 
 ---
-# Another User entity - FIXED!
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
@@ -54,7 +53,7 @@ spec:
 
 ---
 # ----------------------------------------------------------------------
-# 3. API (Kind: API) - FIXED! 🛠️
+# 3. API (Kind: API)
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -75,7 +74,7 @@ spec:
 
 ---
 # ----------------------------------------------------------------------
-# 4. SERVICES (Kind: Component, Type: service) - FIXED! 🛠️
+# 4. SERVICES (Kind: Component, Type: service)
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -98,7 +97,7 @@ spec:
 
 ---
 # ----------------------------------------------------------------------
-# 5. LIBS (Kind: Component, Type: library) - FIXED! 🛠️
+# 5. LIBS (Kind: Component, Type: library)
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -119,7 +118,7 @@ spec:
 
 ---
 # ----------------------------------------------------------------------
-# 6. UI COMPONENTS (Kind: Component, Type: website) - FIXED! 🛠️
+# 6. UI COMPONENTS (Kind: Component, Type: website)
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
