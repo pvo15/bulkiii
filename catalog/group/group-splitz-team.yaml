@@ -13,3 +13,5 @@ spec:
   parent: engineering-department
   children: []
   # 🔗 MEMBERS: Lists the User entities belonging to this team.
+  members:
+    - bulki:gest
