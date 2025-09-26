@@ -1,0 +1,10 @@
+# catalog/systems/system-splitz.yaml
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: splitz
+  title: Splitz Online Lending System
+  description: The complete set of services and APIs for the loan application and management platform.
+spec:
+  # 🔗 GROUP: The team owns the entire system/project.
+  owner: group:splitz-team

@@ -1,0 +1,17 @@
+# catalog/components/component-bulk-validator-lib.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bulk-validator-lib
+  title: Bulk Data Validator Library
+  description: Common logic for validating incoming data formats.
+  tags:
+    - shared
+    - python
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-validator-lib/blob/main/docs
+spec:
+  type: library
+  lifecycle: production
+  owner: group:splitz-team
+  system: splitz

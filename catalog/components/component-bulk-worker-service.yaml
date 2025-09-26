@@ -1,0 +1,20 @@
+# catalog/components/component-bulk-worker-service.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bulk-worker-service
+  title: Bulk Worker Service
+  description: Asynchronous service to process bulk jobs.
+  tags:
+    - java
+    - queue
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-worker-service/blob/main/docs
+spec:
+  type: service
+  lifecycle: production
+  owner: group:splitz-team
+  system: splitz
+  # 🔗 API: Consumes its own defined API.
+  consumesApis:
+    - bulk-ingestion-api

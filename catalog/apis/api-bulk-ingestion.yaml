@@ -1,0 +1,19 @@
+# catalog/apis/api-bulk-ingestion.yaml
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: bulk-ingestion-api
+  title: Bulk Ingestion REST API
+  description: Handles initial data submission and status checks for bulk jobs.
+  tags:
+    - rest
+    - production
+spec:
+  type: openapi
+  lifecycle: production
+  # 🔗 OWNER: The API is owned by the Splitz Team.
+  owner: group:splitz-team
+  # 🔗 SYSTEM: The API is part of the Splitz project/system.
+  system: splitz
+  definition:
+    $text: https://github.com/example-org/bulk-ingestion-api/blob/main/openapi.yaml

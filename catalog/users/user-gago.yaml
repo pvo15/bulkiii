@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: gago
+  title: Gagoo
+  description: Product Owner of Splitz.
+spec:
+  profile:
+    displayName: Gagoooo
+    email: gagog.doe@example.com
+  # 🔗 TEAM: Links the user back to their group.
+  memberOf:
+    - splitz-team
