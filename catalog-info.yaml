@@ -7,14 +7,14 @@ spec:
   type: team
   profile:
     # Intentional no displayName for testing
-    email: splitz.com
+    email: tests@splitz.com
     picture: https://sprintonline.am/squidex-client/api/assets/client/59521d2a-0239-4ef9-ba94-1a5d4c319513
   parent: backstage
   children: []
   
 kind: User
 metadata:
-  name: Gago.davison
+  name: Gagooooo.davison
 spec:
   profile:
     # Intentional no displayName for testing
