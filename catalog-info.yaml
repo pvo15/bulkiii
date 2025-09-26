@@ -1,19 +1,97 @@
+# catalog-info.yaml
+
+# ----------------------------------------------------------------------
+# 1. TEAM (Kind: Group)
+# The entity that represents the team owning the project and services.
+# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Group
 metadata:
-  name: Splitz-dashboard
-  title: Splitz Dashboard
-  description: User interface for tracking and managing Splitz processing jobs.
-  tags:
-    - react
-    - ui
-    - core
-  annotations:
-    github.com/project-slug: pvo15/bulkiii
+  name: splitz-team
+  title: Splitz Core Development Team
+  description: Team responsible for the "splitz" online lending system.
 spec:
-  type: website
-  lifecycle: production
+  type: team
+  profile:
+    displayName: Splitz Team
+    email: splitz-leads@example.com
+  parent: engineering-department 
+  children: []
+  # 🔗 MEMBERS: Lists the User entities belonging to this team.
+  members:
+    - user:alex-dev
+    - user:maya-po
+
+---
+# ----------------------------------------------------------------------
+# 2. USERS (Kind: User)
+# Defines the team members and connects them to the Group.
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: alex-dev
+  title: Alex Developer
+  description: Backend Developer for Splitz.
+spec:
+  profile:
+    displayName: Alex D.
+    email: alex.d@example.com
+  # 🔗 GROUP: Links the user back to their group.
+  memberOf:
+    - splitz-team
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: maya-po
+  title: Maya Product Owner
+  description: Product Owner for the Splitz Project.
+spec:
+  profile:
+    displayName: Maya P.
+    email: maya.p@example.com
+  # 🔗 GROUP: Links the user back to their group.
+  memberOf:
+    - splitz-team
+
+---
+# ----------------------------------------------------------------------
+# 3. PROJECT (Kind: System)
+# Creates the project by the name "splitz" and assigns the Group as the owner.
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: splitz
+  title: Splitz Online Lending System
+  description: The complete set of services and APIs for the loan application and management platform.
+spec:
+  # 🔗 GROUP: The team owns the entire system/project.
   owner: group:splitz-team
-  system: bulk-processing-system
-  consumesApis:
-    - bulk-ingestion-api
+
+---
+# ----------------------------------------------------------------------
+# 4. API Service (Kind: API)
+# Defines the main API and connects it to the Group (Owner) and System (Project).
+# ----------------------------------------------------------------------
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: splitz-loan-api
+  title: Splitz Loan Processing API
+  description: Handles loan application submission, credit checks, and disbursement requests.
+  tags:
+    - api
+    - financial
+    - loan
+spec:
+  type: openapi
+  lifecycle: production
+  # 🔗 GROUP: The API is owned by the Splitz Team.
+  owner: group:splitz-team
+  # 🔗 PROJECT: The API is part of the Splitz project/system.
+  system: splitz
+  definition:
+    $text: https://github.com/splitz-org/loan-api/blob/main/openapi.yaml
