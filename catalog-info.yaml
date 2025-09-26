@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bulkiii
+  annotations:
+    github.com/project-slug: pvo15/bulkiii
+spec:
+  type: other
+  lifecycle: unknown
