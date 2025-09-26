@@ -1,8 +1,7 @@
 # catalog-info.yaml - Consolidated Entity Definitions
 
 # ----------------------------------------------------------------------
-# 1. TEAM (Kind: Group)
-# Defines the team that owns all related entities.
+# 1. TEAM (Kind: Group) - CORRECT START
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -17,15 +16,13 @@ spec:
     email: splitz-team@example.com
   parent: engineering-department 
   children: []
-  # 🔗 MEMBERS: Lists the User entities belonging to this team.
   members:
     - user:gago
     - user:edward
 
 ---
 # ----------------------------------------------------------------------
-# 2. MEMBERS (Kind: User)
-# Defines two user entities that are members of the team.
+# 2. MEMBERS (Kind: User) - FIXED! 🛠️
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -37,29 +34,27 @@ spec:
   profile:
     displayName: Gagoooo
     email: gagog.doe@example.com
-  # 🔗 TEAM: Links the user back to their group.
   memberOf:
     - splitz-team
 
 ---
+# Another User entity - FIXED!
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: edward
   title: Edward
-  description: UI Lead for the Splitz  Team.
+  description: UI Lead for the Splitz Team.
 spec:
   profile:
     displayName: Edward
     email: Edward.smith@example.com
-  # 🔗 TEAM: Links the user back to their group.
   memberOf:
     - splitz-team
 
 ---
 # ----------------------------------------------------------------------
-# 3. API (Kind: API)
-# Defines the API used by the service and the UI component.
+# 3. API (Kind: API) - FIXED! 🛠️
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -73,7 +68,6 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  # 🔗 TEAM: The API is owned by the Bulk Core Team.
   owner: group:splitz-team
   system: bulk-processing-system
   definition:
@@ -81,8 +75,7 @@ spec:
 
 ---
 # ----------------------------------------------------------------------
-# 4. SERVICES (Kind: Component, Type: service)
-# Defines the backend worker service.
+# 4. SERVICES (Kind: Component, Type: service) - FIXED! 🛠️
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -98,17 +91,14 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  # 🔗 TEAM: Owned by the Bulk Core Team.
   owner: group:splitz-team
   system: bulk-processing-system
-  # 🔗 API: Consumes its own defined API (or provides a messaging API).
   consumesApis:
     - bulk-ingestion-api
 
 ---
 # ----------------------------------------------------------------------
-# 5. LIBS (Kind: Component, Type: library)
-# Defines a reusable library used by the service and UI.
+# 5. LIBS (Kind: Component, Type: library) - FIXED! 🛠️
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -124,14 +114,12 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  # 🔗 TEAM: Owned by the Bulk Core Team.
   owner: group:splitz-team
   system: bulk-processing-system
 
 ---
 # ----------------------------------------------------------------------
-# 6. UI COMPONENTS (Kind: Component, Type: website)
-# Defines the frontend UI component, linked to the user's provided repository.
+# 6. UI COMPONENTS (Kind: Component, Type: website) - FIXED! 🛠️
 # ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -143,14 +131,11 @@ metadata:
     - react
     - ui
   annotations:
-    # 🔗 CODE: Links to the GitHub repository provided by the user.
     github.com/project-slug: pvo15/bulkiii
 spec:
   type: website
   lifecycle: production
-  # 🔗 TEAM: Owned by the Bulk Core Team.
   owner: group:splitz-team
   system: bulk-processing-system
-  # 🔗 API: Consumes the Bulk Ingestion API to display job status.
   consumesApis:
     - bulk-ingestion-api
