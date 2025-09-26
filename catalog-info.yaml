@@ -1,8 +1,3 @@
-# catalog-info.yaml - Consolidated Entity Definitions
-
-# ----------------------------------------------------------------------
-# 0. PARENT GROUP (Kind: Group)
-# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
@@ -16,11 +11,7 @@ spec:
     email: engineering@example.com
   children:
     - splitz-team
-
 ---
-# ----------------------------------------------------------------------
-# 1. TEAM (Kind: Group)
-# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
@@ -32,16 +23,12 @@ spec:
   profile:
     displayName: Splitz Team
     email: splitz-team@example.com
-  parent: engineering-department 
+  parent: engineering-department
   children: []
   members:
     - user:gago
     - user:edward
-
 ---
-# ----------------------------------------------------------------------
-# 2. MEMBERS (Kind: User)
-# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
@@ -54,7 +41,6 @@ spec:
     email: gagog.doe@example.com
   memberOf:
     - splitz-team
-
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -68,11 +54,7 @@ spec:
     email: edward.smith@example.com
   memberOf:
     - splitz-team
-
 ---
-# ----------------------------------------------------------------------
-# 3. API (Kind: API)
-# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
@@ -89,11 +71,7 @@ spec:
   system: bulk-processing-system
   definition:
     $text: https://github.com/example-org/bulk-ingestion-api/blob/main/openapi.yaml
-
 ---
-# ----------------------------------------------------------------------
-# 4. SERVICES (Kind: Component, Type: service)
-# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -112,11 +90,7 @@ spec:
   system: bulk-processing-system
   consumesApis:
     - bulk-ingestion-api
-
 ---
-# ----------------------------------------------------------------------
-# 5. LIBS (Kind: Component, Type: library)
-# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -133,11 +107,7 @@ spec:
   lifecycle: production
   owner: group:splitz-team
   system: bulk-processing-system
-
 ---
-# ----------------------------------------------------------------------
-# 6. UI COMPONENTS (Kind: Component, Type: website)
-# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -156,11 +126,7 @@ spec:
   system: bulk-processing-system
   consumesApis:
     - bulk-ingestion-api
-
 ---
-# ----------------------------------------------------------------------
-# 7. SYSTEM (Kind: System)
-# ----------------------------------------------------------------------
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
