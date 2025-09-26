@@ -145,7 +145,6 @@ metadata:
   annotations:
     # 🔗 CODE: Links to the GitHub repository provided by the user.
     github.com/project-slug: pvo15/bulkiii
-    backstage.io/techdocs-ref: url:https://github.com/pvo15/bulkiii/blob/main/docs
 spec:
   type: website
   lifecycle: production
