@@ -6,6 +6,7 @@ metadata:
 spec:
   owner: splitz-team
   targets:
+    - ./catalog/apis/hello-world-api.yaml
 #    - ./catalog/groups/group-splitz-team.yaml
 #    - ./catalog/users/user-gago.yaml
 #    - ./catalog/users/user-edward.yaml
