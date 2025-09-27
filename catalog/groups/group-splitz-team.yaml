@@ -11,4 +11,3 @@ spec:
     email: splitz-team@example.com
   parent: engineering-department
   children: []
-  members: [gago, edward]

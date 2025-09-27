@@ -6,6 +6,6 @@ metadata:
 spec:
   targets:
     - ./catalog/groups/group-splitz-team.yaml
-#    - ./catalog/users/user-gago.yaml
-#    - ./catalog/users/user-edward.yaml
+    - ./catalog/users/user-gago.yaml
+    - ./catalog/users/user-edward.yaml
     - ./catalog/apis/api-bulk-ingestion.yaml
