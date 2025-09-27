@@ -4,7 +4,6 @@ metadata:
   name: bulkiii-catalog
   description: Central location for managing the Bulkiii project catalog entities.
 spec:
-  type: file
   targets:
     - ./catalog/groups/groups-splitz-team.yaml
     - ./catalog/users/user-gago.yaml
