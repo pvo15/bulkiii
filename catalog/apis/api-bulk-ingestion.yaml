@@ -7,7 +7,6 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:splitz-team
-  system: splitz
+  owner: splitz-team
   definition:
     $text: https://github.com/example-org/bulk-ingestion-api/blob/main/openapi.yaml
