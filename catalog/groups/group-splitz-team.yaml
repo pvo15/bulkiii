@@ -1,10 +1,9 @@
-# catalog/groups/groups-splitz-team.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: splitz-team
-  title: Sprint online Team
-  description: Team responsible for the "splitz" online lending system.
+  title: Splitz Team
+  description: Team responsible for Splitz online lending system.
 spec:
   type: team
   profile:
@@ -12,6 +11,6 @@ spec:
     email: splitz-team@example.com
   parent: engineering-department
   children: []
-  # 🔗 MEMBERS: Lists the User entities belonging to this team.
   members:
-    - bulki:gest
+    - user:gago
+    - user:edward
