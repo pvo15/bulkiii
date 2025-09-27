@@ -4,7 +4,7 @@ metadata:
   name: bulkiii-catalog
   description: Central location for managing the Bulkiii project catalog entities.
 spec:
-  owner: group:splitz-team
+  owner: splitz-team
   targets:
     - ./catalog/apis/hello-world-api.yaml
 #    - ./catalog/groups/group-splitz-team.yaml
