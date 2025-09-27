@@ -8,5 +8,4 @@ spec:
   profile:
     displayName: Gagoooo
     email: gagog.doe@example.com
-  memberOf:
-    - splitz-team
+  memberOf: [splitz-team]
