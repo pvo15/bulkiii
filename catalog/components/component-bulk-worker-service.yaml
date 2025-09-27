@@ -13,7 +13,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: group:splitz-team
+  owner: groups:splitz-team
   system: splitz
   # 🔗 API: Consumes its own defined API.
   consumesApis:

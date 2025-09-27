@@ -13,5 +13,5 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: group:splitz-team
+  owner: groups:splitz-team
   system: splitz

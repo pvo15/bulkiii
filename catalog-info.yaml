@@ -6,7 +6,7 @@ metadata:
 spec:
   type: file
   targets:
-    - ./catalog/group/group-splitz-team.yaml
+    - ./catalog/groups/groups-splitz-team.yaml
     - ./catalog/users/user-gago.yaml
     - ./catalog/users/user-edward.yaml
 #    - ./catalog/systems/system-splitz.yaml

@@ -13,7 +13,7 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: group:splitz-team
+  owner: groups:splitz-team
   system: splitz
   # 🔗 API: Consumes the Bulk Ingestion API.
   consumesApis:

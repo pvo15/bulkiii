@@ -12,7 +12,7 @@ spec:
   type: openapi
   lifecycle: production
   # 🔗 OWNER: The API is owned by the Splitz Team.
-  owner: group:splitz-team
+  owner: groups:splitz-team
   # 🔗 SYSTEM: The API is part of the Splitz project/system.
   system: splitz
   definition:

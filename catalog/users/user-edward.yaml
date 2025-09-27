@@ -8,6 +8,6 @@ spec:
   profile:
     displayName: Edward
     email: Edward.smith@example.com
-  # 🔗 TEAM: Links the user back to their group.
+  # 🔗 TEAM: Links the user back to their groups.
   memberOf:
     - splitz-team
