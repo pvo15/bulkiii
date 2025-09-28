@@ -8,4 +8,3 @@ spec:
   profile:
     displayName: Edward
     email: edward.smith@example.com
-  memberOf: [splitz-team]
