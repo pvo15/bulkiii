@@ -6,7 +6,7 @@ metadata:
 spec:
   type: grpc
   lifecycle: deprecated
-  owner: group:splitz-team
+  owner: splitz-team
   definition: |
     // Copyright 2015 gRPC authors.
     //
