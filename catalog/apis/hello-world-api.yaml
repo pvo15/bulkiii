@@ -6,7 +6,7 @@ metadata:
 spec:
   type: grpc
   lifecycle: deprecated
-  owner: adasdadasdsad
+  owner: team-b
   definition: |
     // Copyright 2015 gRPC authors.
     //
