@@ -14,4 +14,4 @@ spec:
   consumesApis:
     - ingestion-api
   providesApis:
-    -splitz-web
+    - api: splitz-web
