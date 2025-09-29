@@ -1,8 +1,18 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: bulkiii-catalog
-  description: Central location for managing the Bulkiii project catalog entities.
+  name: bulkiii-groups
+  description: Location for Groups
 spec:
   targets:
-    - ./catalog/apis/api-bulk-ingestion.yaml
+    - ./catalog/groups/all-groups.yaml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: bulkiii-users
+  description: Location for Users
+spec:
+  targets:
+    - ./catalog/users/all-users.yaml
