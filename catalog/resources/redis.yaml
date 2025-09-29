@@ -5,4 +5,4 @@ metadata:
   description: Postgre Sql
 spec:
   type: database
-  owner: group:splitz-team
+  owner: splitz-team
