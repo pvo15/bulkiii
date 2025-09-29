@@ -1,0 +1,15 @@
+# catalog/components/fraudguard.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fraudguard
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-worker-service/blob/main/docs
+spec:
+  type: service
+  lifecycle: production
+  owner: groups:splitz-team
+  dependsOn:
+    - resource:awstorage
+    - resource:postgresql
+    - component:'Scoring, Ekeng, DecisionMaker, Bpm, DocGen, Redlock, NotificationService, Kyc(Onfido, etc)'

@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: awstorage
+  description: S3Storage
+spec:
+  type: database
+  owner: group:splitz-team
