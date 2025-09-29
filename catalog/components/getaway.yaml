@@ -4,6 +4,6 @@ metadata:
   name: getaway
   title: Getaway Service
 spec:
-  type: openapi
+  type: service
   lifecycle: production
   owner: group:splitz-team
