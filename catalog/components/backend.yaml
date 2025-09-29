@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: back end service
+  name: back-end-service
   tags:
     - C#
   annotations:
