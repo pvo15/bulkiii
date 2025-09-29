@@ -11,6 +11,9 @@ spec:
     email: splitz-team@example.com
   parent: engineering-department
   children: []
+  members:
+    - user:edward
+    - user:gago
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
