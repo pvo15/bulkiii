@@ -11,6 +11,8 @@ spec:
   type: website
   lifecycle: production
   owner: groups:splitz-team
-=  tags:
+  dependsOn:
+    - component: ingestion-api
+  tags:
     - react
     - ui
