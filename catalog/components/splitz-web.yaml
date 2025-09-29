@@ -5,9 +5,6 @@ metadata:
   name: splitz-web
   title: Splitz Web UI
   description: User interface for tracking and managing bulk processing jobs.
-  tags:
-    - react
-    - ui
   annotations:
     github.com/project-slug: pvo15/bulkiii
 spec:
@@ -15,5 +12,8 @@ spec:
   lifecycle: production
   owner: groups:splitz-team
   system: splitz
+  tags:
+    - react
+    - ui
   dependencyOf:
-    - component: default/quantum-lib
+    - component:default/quantum-lib
