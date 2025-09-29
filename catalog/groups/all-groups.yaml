@@ -1,8 +1,27 @@
 apiVersion: backstage.io/v1alpha1
-kind: Location
+kind: Group
 metadata:
-  name: groups
-  description: A collection of all Backstage example Groups
+  name: splitz-team
+  title: Splitz Team
+  description: Team responsible for Splitz online lending system.
 spec:
-  targets:
-    - ./users/user-edward.yaml
+  type: team
+  profile:
+    displayName: Splitz Team
+    email: splitz-team@example.com
+  parent: engineering-department
+  children: []
+  members:
+    - user:edward
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: edward
+  title: Edward
+  description: UI Lead for Splitz.
+spec:
+  profile:
+    displayName: Edward
+    email: edward.smith@example.com
+  memberOf: [splitz-team]
