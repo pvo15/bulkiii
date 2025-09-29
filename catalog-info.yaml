@@ -4,6 +4,7 @@ metadata:
   name: bulk-catalog
 spec:
   targets:
+    - ./catalog/systems/fraud-guard.yaml
     - ./catalog/apis/ingestion-api.yaml
     - ./catalog/components/backend.yaml
     - ./catalog/components/splitz-web.yaml
