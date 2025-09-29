@@ -1,0 +1,16 @@
+# catalog/components/material-ui.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: material-ui
+  tags:
+    - shared
+    - react
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-validator-lib/blob/main/docs
+spec:
+  type: library
+  lifecycle: production
+  owner: google
+  dependsOn:
+    - component:quantum-lib
