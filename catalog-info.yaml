@@ -11,7 +11,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: bulkiii-users
+  name: bulkiii-groups
   description: Location for Users
 spec:
   targets:
