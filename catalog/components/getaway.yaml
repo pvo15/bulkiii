@@ -8,7 +8,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: groups:splitz-team
+  owner: group:splitz-team
   dependsOn:
     - component:accesscontrol
     - resource:redis

@@ -8,7 +8,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: groups:splitz-team
+  owner: group:splitz-team
   # 🔗 API: Consumes its own defined API.
   providesApis:
     - ingestion-api
