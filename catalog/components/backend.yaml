@@ -9,7 +9,6 @@ spec:
   type: service
   lifecycle: production
   owner: groups:splitz-team
-  system: fraud-guard
   # 🔗 API: Consumes its own defined API.
   consumesApis:
     - ingestion-api
