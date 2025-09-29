@@ -5,7 +5,7 @@ metadata:
   description: Central location for managing the Bulkiii project catalog entities.
 spec:
   targets:
-#    - ./catalog/groups/group-splitz-team.yaml
+    - ./catalog/groups/group-splitz-team.yaml
 #    - ./catalog/apis/hello-world-api.yaml
 #    - ./catalog/users/user-gago.yaml
 #    - ./catalog/users/user-edward.yaml
