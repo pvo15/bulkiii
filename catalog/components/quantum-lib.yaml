@@ -12,3 +12,5 @@ spec:
   type: library
   lifecycle: production
   owner: groups:splitz-team
+  dependencyOf:
+    - component: splitz-web

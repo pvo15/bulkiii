@@ -8,6 +8,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: group:splitz-team
+  provide
   definition: |
     import { z } from 'zod';
     import { publicProcedure, router } from '../trpc';
