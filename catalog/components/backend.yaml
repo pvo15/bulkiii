@@ -13,4 +13,5 @@ spec:
   # 🔗 API: Consumes its own defined API.
   consumesApis:
     - ingestion-api
-  providesApis: [splitz-web]
+  providesApis:
+    - ingestion-api
