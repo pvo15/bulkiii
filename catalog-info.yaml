@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: bulkiii-catalog
-  description: Central location for managing the Bulkiii project catalog entities.
 spec:
   targets:
+    - ./catalog/groups/splitz-team.yaml
     - ./catalog/apis/api-bulk-ingestion.yaml
