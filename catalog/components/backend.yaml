@@ -3,8 +3,6 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: back-end-service
-  tags:
-    - C#
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-worker-service/blob/main/docs
 spec:
