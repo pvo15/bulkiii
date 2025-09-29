@@ -13,6 +13,7 @@ spec:
   children: []
   members:
     - user:edward
+    - user:gago
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -25,3 +26,15 @@ spec:
     displayName: Edward
     email: edward.smith@example.com
   memberOf: [splitz-team]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: gago
+  title: Gago
+  description: UI Lead for Splitz.
+spec:
+  profile:
+    displayName: Gago
+    email: gaggo.smith@example.com
+  memberOf: [splitz-team ]
