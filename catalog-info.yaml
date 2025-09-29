@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: bulkiii-groups
+  name: bulkiii-all
   description: Location for Groups
 spec:
   targets:
-    - ./catalog/groups/all-groups.yaml
+    - ./catalog/apis/api-bulk-ingestion.yaml
