@@ -15,8 +15,5 @@ catalog:
       # inside any subdirectory of the 'catalog/' folder.
       rules:
         # This single rule discovers files like:
-        # - catalog/groups/groups-splitz-team.yaml
-        # - catalog/users/user-gago.yaml
-        # - catalog/components/component-bulk-worker-service.yaml
         - allow: [ Group, User, Component, System, API ] # Must allow all entity kinds
           pattern: '**/(*.yaml|*.yml)'
