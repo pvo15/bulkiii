@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: bulk-catalog
+  name: Splytz-catalog
 spec:
   targets:
     - ./catalog/systems/fraud-guard.yaml
