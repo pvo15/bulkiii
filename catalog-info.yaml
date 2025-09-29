@@ -7,6 +7,7 @@ spec:
     - ./catalog/systems/fraud-guard.yaml
     - ./catalog/resources/db-resources.yaml
     - ./catalog/apis/ingestion-api.yaml
+    - ./catalog/components/accesscontrol.yaml
     - ./catalog/components/getaway.yaml
     - ./catalog/components/backend.yaml
     - ./catalog/components/material-ui.yaml

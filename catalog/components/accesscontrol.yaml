@@ -1,17 +1,11 @@
-# catalog/components/backend.yaml
+# catalog/components/getaway.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: back-end-service
+  name: accesscontrol
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-worker-service/blob/main/docs
 spec:
   type: service
   lifecycle: production
   owner: groups:splitz-team
-  # 🔗 API: Consumes its own defined API.
-  providesApis:
-    - ingestion-api
-  dependsOn:
-    - component:getaway
-    - component:accesscontrol
