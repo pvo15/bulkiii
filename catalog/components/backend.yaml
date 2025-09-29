@@ -12,3 +12,5 @@ spec:
   # 🔗 API: Consumes its own defined API.
   providesApis:
     - ingestion-api
+  dependsOn:
+    - resource:my-database
