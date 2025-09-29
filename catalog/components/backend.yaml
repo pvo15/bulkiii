@@ -10,7 +10,5 @@ spec:
   lifecycle: production
   owner: groups:splitz-team
   # 🔗 API: Consumes its own defined API.
-  consumesApis:
-    - ingestion-api
   providesApis:
     - ingestion-api
