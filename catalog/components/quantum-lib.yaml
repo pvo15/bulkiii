@@ -1,17 +1,14 @@
-# catalog/components/component-bulk-validator-lib.yaml
+# catalog/components/quantum-lib.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: bulk-validator-lib
-  title: Bulk Data Validator Library
-  description: Common logic for validating incoming data formats.
+  name: quantum lib
   tags:
     - shared
-    - python
+    - react
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-validator-lib/blob/main/docs
 spec:
   type: library
   lifecycle: production
   owner: groups:splitz-team
-  system: splitz

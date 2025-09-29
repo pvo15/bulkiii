@@ -4,4 +4,6 @@ metadata:
   name: bulk-catalog
 spec:
   targets:
-    - ./catalog/apis/api-bulk-ingestion.yaml
+    - ./catalog/components/backend.yaml
+    - ./catalog/components/splitz-web.yaml
+    - ./catalog/components/quantum-lib.yaml
