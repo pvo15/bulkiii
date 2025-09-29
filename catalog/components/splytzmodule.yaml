@@ -1,16 +1,14 @@
-# catalog/components/fraudguard.yaml
+# catalog/components/splytzmodule.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: fraudguard
-  description: Scoring, Ekeng, DecisionMaker, Bpm, DocGen, Redlock, NotificationService, Kyc(Onfido, etc)
+  name: splytzmodule
+  description: Splytz Module
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-worker-service/blob/main/docs
 spec:
   type: service
   lifecycle: production
   owner: groups:splitz-team
-  dependsOn:
-    - resource:awstorage
-    - resource:postgresql
-
+  subcomponentOf:
+    - component:fraudguard
