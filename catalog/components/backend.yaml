@@ -14,4 +14,3 @@ spec:
     - ingestion-api
   dependsOn:
     - component:getaway
-    - component:accesscontrol

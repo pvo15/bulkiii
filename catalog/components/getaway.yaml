@@ -9,3 +9,6 @@ spec:
   type: service
   lifecycle: production
   owner: groups:splitz-team
+  dependsOn:
+    - component:accesscontrol
+    - resources:redis
