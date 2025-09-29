@@ -12,7 +12,7 @@ spec:
   lifecycle: production
   owner: groups:splitz-team
   dependsOn:
-    -component:back-end-service
+    - component:back-end-service
   tags:
     - react
     - ui
