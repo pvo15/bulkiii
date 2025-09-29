@@ -6,7 +6,7 @@ spec:
   targets:
     - ./catalog/systems/fraud-guard.yaml
     - ./catalog/apis/ingestion-api.yaml
-#    - ./catalog/components/getaway.yaml
+    - ./catalog/components/getaway.yaml
     - ./catalog/components/backend.yaml
     - ./catalog/components/splitz-web.yaml
     - ./catalog/components/quantum-lib.yaml

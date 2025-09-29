@@ -7,7 +7,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:splitz-team
+  owner: groups:splitz-team
   definition: |
     import { z } from 'zod';
     import { publicProcedure, router } from '../trpc';
