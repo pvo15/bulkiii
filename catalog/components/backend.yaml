@@ -13,4 +13,4 @@ spec:
   providesApis:
     - ingestion-api
   dependsOn:
-    - resource:my-database
+    - resource:postgresql
