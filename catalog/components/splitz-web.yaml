@@ -15,5 +15,3 @@ spec:
   tags:
     - react
     - ui
-  dependencyOf:
-    - component:default/quantum-lib
