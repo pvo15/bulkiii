@@ -16,4 +16,4 @@ spec:
   owner: groups:splitz-team
   system: splitz
   dependencyOf:
-    - component: quantum-lib
+    - component: default/quantum-lib
