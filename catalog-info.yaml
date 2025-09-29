@@ -1,8 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: bulkiii-catalog
+  name: bulk-catalog
 spec:
   targets:
-    - ./catalog/groups/splitz-team.yaml
     - ./catalog/apis/api-bulk-ingestion.yaml
