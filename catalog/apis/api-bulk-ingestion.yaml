@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: bulk-ingestion-api
-  title: Bulk Ingestion REST API
+  name: ingestion-api
+  title: Ingestion REST API
   description: Handles initial data submission and status checks for bulk jobs.
 spec:
   type: openapi
