@@ -11,4 +11,4 @@ spec:
   owner: groups:splitz-team
   dependsOn:
     - component:accesscontrol
-    - resources:redis
+    - resource:redis
