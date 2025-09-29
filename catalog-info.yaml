@@ -15,4 +15,4 @@ metadata:
   description: Location for Users
 spec:
   targets:
-    - ./catalog/groups/all-users.yaml
+    - ./catalog/groups/all-groups.yaml
