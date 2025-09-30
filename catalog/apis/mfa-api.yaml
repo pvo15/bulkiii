@@ -9,9 +9,4 @@ spec:
   lifecycle: production
   owner: group:splitz-team
   definition:
-    $text: |
-      openapi: 3.0.0
-      info:
-        title: Payment API
-        version: 1.0.0
-      paths: {}
+    $text: https://github.com/APIs-guru/openapi-directory/blob/main/APIs/archive.org/search/1.0.0/openapi.yaml
