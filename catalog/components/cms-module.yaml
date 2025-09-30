@@ -11,4 +11,4 @@ spec:
   owner: group:splitz-team
   subcomponentOf: component:fraudguard
   dependsOn:
-    -resource:postgresql
+    - resource:postgresql
