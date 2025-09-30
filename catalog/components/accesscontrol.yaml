@@ -10,5 +10,5 @@ spec:
   lifecycle: production
   owner: group:splitz-team
   dependsOn:
-    -component:bootstrapper
-    -resource:redis
+    - component:bootstrapper
+    - resource:redis
