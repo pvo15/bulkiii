@@ -9,6 +9,8 @@ spec:
     - ./catalog/resources/redis.yaml
     - ./catalog/resources/awstorage.yaml
     - ./catalog/apis/ingestion-api.yaml
+    - ./catalog/apis/mfa-api.yaml
+    - ./catalog/components/mfa-module.yaml
     - ./catalog/components/splytzmodule.yaml
     - ./catalog/components/fraudguard.yaml
     - ./catalog/components/accesscontrol.yaml
