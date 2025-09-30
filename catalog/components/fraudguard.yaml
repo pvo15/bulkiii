@@ -10,6 +10,7 @@ spec:
   type: service
   lifecycle: production
   owner: group:splitz-team
+  subcomponentOf: component:bootstrapper
   dependsOn:
     - resource:awstorage
     - resource:postgresql

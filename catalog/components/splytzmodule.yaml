@@ -11,3 +11,6 @@ spec:
   lifecycle: production
   owner: groups:splitz-team
   subcomponentOf: component:fraudguard
+  dependsOn:
+    - resource:postgresql
+    - resource:awstorage

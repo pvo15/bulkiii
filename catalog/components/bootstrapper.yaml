@@ -1,15 +1,14 @@
-# catalog/components/mfa-module.yaml
+# catalog/components/bootstrapper.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: mfa-module
+  name: bootstrapper
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-worker-service/blob/main/docs
 spec:
   type: service
   lifecycle: production
   owner: group:splitz-team
-  consumesAPI: mfa-api
-  subcomponentOf: component:fraudguard
   dependsOn:
-    - resource:postgresql
+    -component:accesscontrol
+    -resource:redis

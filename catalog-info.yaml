@@ -10,6 +10,9 @@ spec:
     - ./catalog/resources/awstorage.yaml
     - ./catalog/apis/ingestion-api.yaml
     - ./catalog/apis/mfa-api.yaml
+    - ./catalog/components/cms-module.yaml
+    - ./catalog/components/order-module.yaml
+    - ./catalog/components/bootstrapper.yaml
     - ./catalog/components/mfa-module.yaml
     - ./catalog/components/splytzmodule.yaml
     - ./catalog/components/fraudguard.yaml

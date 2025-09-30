@@ -1,8 +1,8 @@
-# catalog/components/mfa-module.yaml
+# catalog/components/order-module.yaml.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: mfa-module
+  name: order-module.yaml
   annotations:
     backstage.io/techdocs-ref: url:https://github.com/example-org/bulk-worker-service/blob/main/docs
 spec:
