@@ -9,6 +9,6 @@ spec:
   type: service
   lifecycle: production
   owner: group:splitz-team
-  subcomponentOf: component:bootstrapper
+  subcomponentOf: component:getaway
   dependsOn:
     - resource:redis

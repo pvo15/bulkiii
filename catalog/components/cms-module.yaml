@@ -9,6 +9,6 @@ spec:
   type: service
   lifecycle: production
   owner: group:splitz-team
-  subcomponentOf: component:fraudguard
+  subcomponentOf: component:bootstrapper
   dependsOn:
     - resource:postgresql

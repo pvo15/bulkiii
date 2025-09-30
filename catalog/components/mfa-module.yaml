@@ -10,6 +10,6 @@ spec:
   lifecycle: production
   owner: group:splitz-team
   consumesAPI: mfa-api
-  subcomponentOf: component:fraudguard
+  subcomponentOf: component:bootstrapper
   dependsOn:
     - resource:postgresql
